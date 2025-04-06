@@ -14,14 +14,8 @@ class Gamepad {
         this.$placeholder = $("#placeholder");
         this.$gamepad = $("#gamepad");
         this.$overlay = $("#overlay");
-        this.$skinSelect = $("select[name=skin]");
-        this.$backgroundSelect = $("select[name=background]");
         this.$colorOverlay = this.$overlay.find("#color");
-        this.$colorSelect = this.$colorOverlay.find("select[name=color]");
         this.$triggersOverlay = this.$overlay.find("#triggers");
-        this.$triggersSelect = this.$triggersOverlay.find(
-            "select[name=triggers]"
-        );
         this.$helpPopout = $("#help-popout");
         this.$gamepadList = $("#gamepad-list");
 
@@ -46,9 +40,6 @@ class Gamepad {
 
         // ensure the GamePad API is available on this browser
         this.assertGamepadAPI();
-
-        this.initOverlaySelectors();
-
         // gamepad collection default values
         this.gamepads = {};
         this.identifiers = {
