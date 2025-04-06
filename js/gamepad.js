@@ -138,7 +138,7 @@ class Gamepad {
         // change the type if specified
         const skin = this.getUrlParam("type");
         if (skin) {
-            this.changeSkin(skin);
+            this.changeSkin("ds4");
         }
 
         // change the background if specified
